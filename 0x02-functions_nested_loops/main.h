@@ -1,29 +1,17 @@
 #define MAIN_H_INCLUDED
 
-int _putchar(char c);
-
-void print _alphabet(void);
-
-int _islower(int c);
-
-int isalpha(int c);
-
-int print_sign(int n);
-
-int _abs(int n);
-
-int print_last_digit(int n);
-
-void jack_bauer(void);
-
-void times_table(void);
-
-int add(int a, int b);
-
-void print_to_98(int n);
-
-void print_times_table(int n);
-
+int_putchar(char c);
+voidprint_alphabet(void);
+voidprint_alphabet_X10(void);
+int_islower(int c);
+int_isalpha(int c);
+intprint_sign(int n);
+int_abs(int n);
+intprint_last_digit(int n);
+voi jack_bauer(void);
+voidtimes_table(void);
+intadd(int a, int b);
+voidprint_to_98(int n);
+voidprint_times_table(int n);
 
 #endif
-
