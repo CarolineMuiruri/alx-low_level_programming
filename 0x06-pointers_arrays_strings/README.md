@@ -1,1 +1,1 @@
-shell pointers
+shell array strings
