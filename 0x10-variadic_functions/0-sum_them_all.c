@@ -1,26 +1,23 @@
-#include "variadic_functions.h"
-#include "stdarg.h"
+#ifndef variadic_functions_h
+#define variadic_functions_h
+#include <stdarg.h>
+#include <stdio.h>
 
-/**
- * sum_them_all - returns the sum of all parameters
- * @n: the numbers of arguments being passed through
- * Return: the sum of all parameters
+/*
+ * struct check - paramenters to check against
+ * @c: type
+ * @f: the function to send it to
  */
-int sum_them_all(const unsigned int n, ...)
+typedef struct check
 {
-	va_list args;
-	unsigned int sum = 0, i;
+	char *chk;
+	void (*f)(va_list list);
+} check_t;
 
-	if (n == 0)
-		return (0);
+int sum_them_all(const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
+int _putchar(char c);
 
-	va_start(args, n);
-
-	for (i = 0; i < n; i++)
-		sum += va_arg(args, int);
-
-	va_end(args);
-
-	return (sum);
-
-}
+#endif
